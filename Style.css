@@ -1,0 +1,50 @@
+/* Reset de estilos para un mejor control */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #009b44
+    ;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.logo.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content p {
+    font-size: 18px;
+    color: white;
+    margin: 10px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Animación de aparición */
+.content p.animated.show {
+    opacity: 1;
+    transform: translateY(0);
+}
